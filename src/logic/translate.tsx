@@ -9,6 +9,7 @@ const orders: RegExp =  new RegExp(/^[LRM]+$/)
 
 const translate = (command: string) => {
   let result:string = ''
+  let error:string = ''
   let commands = command.split(' ')
   if (command.match(orders)){
     let rover = Rover.getLast()
@@ -22,7 +23,7 @@ const translate = (command: string) => {
         rover.turn(c)
       }
     })
-    result === '' ? result = rover.stringify() : result = result
+    error === '' ? result = rover.stringify() : result = error
   }
   else if (commands.length === 2 && commands.join('').match(digits)){
     if (parseInt(commands[0]) >0 && parseInt(commands[1])>0){
