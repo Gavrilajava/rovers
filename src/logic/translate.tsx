@@ -16,7 +16,7 @@ const translate = (command: string) => {
     command.split('').forEach(c => {
       if (c === 'M' && result === '') {
          if (!rover.move()){
-           result =  `Incorrect move at ${rover.stringify()}`
+          error =  `Incorrect move at ${rover.stringify()}`
          }
       }
       else{
