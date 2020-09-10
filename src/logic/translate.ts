@@ -7,7 +7,7 @@ const directions =  new RegExp(/^[NESW]$/)
 const orders =  new RegExp(/^[LRM]+$/)
 
 
-const translate  = (command:string):string => {
+const translate  = (command: string): string => {
   let result = ''
   let error = ''
   const commands = command.split(' ')

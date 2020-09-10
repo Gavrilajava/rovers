@@ -18,17 +18,16 @@ export default class Rover {
     Rover.all.push(this)
   }
 
-  public static getLast():Rover {
+  public static getLast(): Rover {
     return Rover.all[Rover.all.length -1]
   }
 
-  public stringify():string {
+  public stringify(): string {
     return `${this.x} ${this.y} ${this.direction}`
   }
 
-  public move():boolean {
+  public move(): boolean {
     let newCoords: Array<number> = []
-    debugger
     switch(this.direction){
       case "N":
         newCoords = [this.x, this.y+1]
@@ -46,7 +45,6 @@ export default class Rover {
         console.error("Houston, we have a problem.")
     }
     if (this.grid.validate(newCoords)){
-      debugger
       this.x = newCoords[0]
       this.y = newCoords[1]
       return true
@@ -56,7 +54,7 @@ export default class Rover {
     }
   }
 
-  public turn(side: string):boolean{
+  public turn(side: string): boolean{
     let x = Rover.directions.indexOf(this.direction)
     if (side === 'R'){
       x === 3 ? x = 0 : x++

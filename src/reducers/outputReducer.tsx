@@ -2,7 +2,7 @@
 import {Action} from '../types'
 
 
-const OutputReducer = (state = [], action: Action) => {
+const OutputReducer = (state = [], action: Action): Array<string> => {
   switch (action.type) {
     case 'addOutput':
       return [...state, action.output ]

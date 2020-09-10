@@ -1,12 +1,12 @@
 import React from 'react';
-
+import PropTypes from 'prop-types'
 
 type Props = {
-  title: string,
-  children: JSX.Element
+  title: string;
+  children: JSX.Element;
 }
 
-const  InputOutput : React.FC<Props> = ({title, children}) => {
+const  InputOutput: React.FC<Props> = ({title, children}) => {
 
   return (
     <div className= 'console'>
@@ -22,6 +22,10 @@ const  InputOutput : React.FC<Props> = ({title, children}) => {
   );
 }
 
+InputOutput.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired
+}
 
 
 export default InputOutput;

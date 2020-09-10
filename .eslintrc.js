@@ -9,7 +9,8 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+      version: "detect", // Tells eslint-plugin-react to automatically detect the version of React to use
+      "import/resolver": { "typescript": {} }
     }
   },
   extends: [
@@ -17,6 +18,8 @@ module.exports = {
     "plugin:@typescript-eslint/recommended" // Uses the recommended rules from @typescript-eslint/eslint-plugin
   ],
   rules: {
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-use-before-define": "off"
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
   },

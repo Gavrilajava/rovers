@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import OutputReducer from './outputReducer'
 
 export interface RootState {
-  OutputReducer: Array<string>
+  OutputReducer: Array<string>;
 }
 
 
