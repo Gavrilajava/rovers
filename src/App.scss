@@ -1,0 +1,62 @@
+
+$filedsize: 100vh;
+$height: calc(#{$filedsize} / 2);
+$width:  100vh; //calc(#{100vw} - #{100vh});
+$padding: 1.25rem;
+$input-heigth: calc(#{$height} - #{$padding}*6);
+
+body {
+  cursor: auto;
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.plateu{
+  float:right;
+  background: yellow;
+  opacity: 0.5;
+
+  height: $filedsize;
+  width: $filedsize;
+  border: 1px solid black;
+}
+
+.console, .output{
+  border: 1px solid #DDDDDD;
+  background-color: #eee;
+  height: $height;
+  width: $width;
+  form {
+    box-sizing: border-box;
+  }
+  fieldset {
+    border: 1px solid #DDDDDD;
+    margin: 1.125rem 1.125rem;
+    padding: 1.25rem;
+    legend {
+      font-weight: 600;
+    }
+    textarea, div {
+      border-radius: 0;
+      border: 1px solid #cccccc;
+      resize: none;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+      color: rgba(0,0,0,0.75);
+      display: block;
+      font-family: inherit;
+      font-size: 0.875rem;
+      width: 100%;
+      height: $input-heigth;
+    }
+    textarea {
+      background-color: #FFFFFF;
+    }
+    div {
+      padding: 0.4rem;
+    }
+  }
+}
+
