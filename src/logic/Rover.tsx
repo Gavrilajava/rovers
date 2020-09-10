@@ -18,7 +18,7 @@ export default class Rover {
     Rover.all.push(this)
   }
 
-  public static getLast() {
+  public static getLast():Rover {
     return Rover.all[Rover.all.length -1]
   }
 
@@ -26,7 +26,7 @@ export default class Rover {
     return `${this.x} ${this.y} ${this.direction}`
   }
 
-  public move() {
+  public move():boolean {
     let newCoords: Array<number> = []
     debugger
     switch(this.direction){
@@ -56,7 +56,7 @@ export default class Rover {
     }
   }
 
-  public turn(side: string){
+  public turn(side: string):boolean{
     let x = Rover.directions.indexOf(this.direction)
     if (side === 'R'){
       x === 3 ? x = 0 : x++

@@ -12,11 +12,11 @@ export default class Grid {
   
   }
 
-  public static getLast() {
+  public static getLast():Grid {
     return Grid.last
   }
 
-  public validate(coords: Array<number>) {
+  public validate(coords: Array<number>):boolean {
     if (coords[0] <= this.x && 
         coords[1] <= this.y &&
         coords[0] >= 0 && 

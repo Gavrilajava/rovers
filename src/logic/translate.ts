@@ -2,17 +2,17 @@ import Grid from './Grid'
 import Rover from './Rover'
 
 
-const digits: RegExp =  new RegExp(/^\d+$/)
-const directions: RegExp =  new RegExp(/^[NESW]$/)
-const orders: RegExp =  new RegExp(/^[LRM]+$/)
+const digits =  new RegExp(/^\d+$/)
+const directions =  new RegExp(/^[NESW]$/)
+const orders =  new RegExp(/^[LRM]+$/)
 
 
-const translate = (command: string) => {
-  let result:string = ''
-  let error:string = ''
-  let commands = command.split(' ')
+const translate  = (command:string):string => {
+  let result = ''
+  let error = ''
+  const commands = command.split(' ')
   if (command.match(orders)){
-    let rover = Rover.getLast()
+    const rover = Rover.getLast()
     command.split('').forEach(c => {
       if (c === 'M' && result === '') {
          if (!rover.move()){
